@@ -9,12 +9,12 @@ OBJ=kernel/kernel_entry.o kernel/kernel.o
 
 all: os-image
 
-os-image: boot/boot_sect.bin kernel.bin
+os-image: boot/boot_sect.bin kernel/kernel.bin
 	mkdir -p $(BIN)
 	cat $^ > $(BIN)/$@
 
 # build kernel binary file
-kernel.bin: $(OBJ)
+kernel/kernel.bin: $(OBJ)
 	$(LD) $(LDFLAGS) $^ -o $@
 
 %.o: %.c ${HEADERS}
