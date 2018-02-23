@@ -23,5 +23,9 @@ print_string_start:
 	jmp print_string_start   ; go back to beginning
 
 print_string_end:
+	mov al, 0xA
+	int 0x10
+	mov al, 0xD
+	int 0x10
 	popa                     ; return the state of all the registers
 	ret
