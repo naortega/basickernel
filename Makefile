@@ -1,11 +1,11 @@
 ASM=nasm
 BIN=bin
-CFLAGS=-ffreestanding -fno-pie -m32
+CFLAGS=-ffreestanding -fno-pie -m32 -ansi
 CC=gcc
 LD=ld
 LDFLAGS=-melf_i386 -Ttext 0x1000 --oformat binary
 
-OBJ=kernel/kernel_entry.o kernel/kernel.o
+OBJ=kernel/kernel_entry.o kernel/kernel.o kernel/ports.o
 
 all: os-image
 
@@ -29,5 +29,5 @@ kernel/kernel.bin: $(OBJ)
 .PHONY: clean
 
 clean:
-	rm -rf boot/*.bin boot/*.o
+	rm -rf boot/*.bin kernel/*.bin
 	rm -rf kernel/*.o boot/*.o drivers/*.o
