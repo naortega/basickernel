@@ -1,4 +1,4 @@
-unsigned char port_byte_in(unsigned char port) {
+unsigned char port_byte_in(unsigned short port) {
 	unsigned char res;
 	/*
 	 * `"=a" (res)' means: put result of `al' into `res' variable
@@ -8,7 +8,7 @@ unsigned char port_byte_in(unsigned char port) {
 	return res;
 }
 
-void port_byte_out(unsigned char port, unsigned char data) {
+void port_byte_out(unsigned short port, unsigned char data) {
 	__asm__("out %%al, %%dx" : : "a" (data), "d" (port));
 }
 

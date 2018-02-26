@@ -1,10 +1,6 @@
+#include "../drivers/screen.h"
+
 void main() {
-	/*
-	 * point to first text cell of the video memory
-	 */
-	char *video_memory = (char*) 0xb8000;
-	/*
-	 * store the character 'X' there
-	 */
-	*video_memory = 'X';
+	/*clear_screen();
+	print_at("This is a test.", 0, 0);*/
 }

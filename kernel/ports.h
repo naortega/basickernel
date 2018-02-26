@@ -3,11 +3,11 @@
 /*
  * return a byte from a port.
  */
-unsigned char port_byte_in(unsigned char port);
+unsigned char port_byte_in(unsigned short port);
 /*
  * write a byte of data to a port.
  */
-void port_byte_out(unsigned char port, unsigned char data);
+void port_byte_out(unsigned short port, unsigned char data);
 /*
  * return a word of data from a port.
  */

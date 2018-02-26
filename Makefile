@@ -5,7 +5,7 @@ CC=gcc
 LD=ld
 LDFLAGS=-melf_i386 -Ttext 0x1000 --oformat binary
 
-OBJ=kernel/kernel_entry.o kernel/kernel.o kernel/ports.o
+OBJ=kernel/kernel_entry.o kernel/kernel.o kernel/ports.o kernel/util.o drivers/screen.o
 
 all: os-image
 
