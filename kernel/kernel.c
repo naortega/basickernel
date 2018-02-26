@@ -2,5 +2,5 @@
 
 void main() {
 	clear_screen();
-	print("Kernel booted succesfully");
+	print("Kernel initialized successfully!\n");
 }
