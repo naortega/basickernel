@@ -10,7 +10,7 @@ KERNEL_OFFSET: equ 0x1000      ; kernel memory offset
 	call load_kernel           ; load our kernel from memory
 	call switch_to_pm          ; switch to 32-bit protected mode
 
-	jmp $
+	;jmp $
 
 %include "print.asm"
 %include "print32.asm"
@@ -41,7 +41,7 @@ BEGIN_PM:
 
 	call KERNEL_OFFSET
 
-	jmp $
+	;jmp $
 
 ;;;
 ; Data
