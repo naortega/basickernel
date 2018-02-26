@@ -25,7 +25,7 @@ load_kernel:
 	call print_string
 
 	mov bx, KERNEL_OFFSET      ; address to load the kernel to
-	mov dh, 1                  ; number of sectors to load
+	mov dh, 3                  ; number of sectors to load
 	mov dl, [BOOT_DRIVE]       ; drive to load from
 	call disk_load
 
