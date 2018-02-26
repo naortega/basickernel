@@ -17,7 +17,7 @@ os-image: boot/boot_sect.bin kernel/kernel.bin
 kernel/kernel.bin: $(OBJ)
 	$(LD) $(LDFLAGS) $^ -o $@
 
-%.o: %.c ${HEADERS}
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 %.o: %.asm

@@ -32,6 +32,7 @@ void set_cursor(int offset) {
 	port_byte_out(REG_SCREEN_CTRL, 14);
 	port_byte_out(REG_SCREEN_DATA, (unsigned char)(offset >> 8));
 	port_byte_out(REG_SCREEN_CTRL, 15);
+	port_byte_out(REG_SCREEN_DATA, (unsigned char)offset);
 }
 
 int handle_scrolling(int cursor_offset) {
@@ -76,14 +77,10 @@ void print_char(char c, int col, int row, char attr_byte) {
 	 * as an offset
 	 */
 	if(col >= 0 && row >= 0)
-	{
 		offset = get_screen_offset(col, row);
-	}
 	/* otherwise use the cursor's current location */
 	else
-	{
 		offset = get_cursor();
-	}
 
 	/* handle a newline */
 	if(c == '\n')
@@ -95,7 +92,7 @@ void print_char(char c, int col, int row, char attr_byte) {
 	else
 	{
 		vidmem[offset] = c;
-		vidmem[offset+1] = attr_byte;
+		vidmem[offset + 1] = attr_byte;
 	}
 
 	/* update the offset to the next cell */
