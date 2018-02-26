@@ -1,9 +1,9 @@
 ASM=nasm
 BIN=bin
-CFLAGS=-ffreestanding -fno-pie -m32 -ansi
-CC=gcc
-LD=ld
-LDFLAGS=-melf_i386 -Ttext 0x1000 --oformat binary
+CC=i686-elf-gcc
+CFLAGS=-ffreestanding -fno-pie -ansi
+LD=i686-elf-ld
+LDFLAGS=-Ttext 0x1000 --oformat binary
 
 OBJ=kernel/kernel_entry.o kernel/kernel.o kernel/ports.o kernel/util.o drivers/screen.o
 
