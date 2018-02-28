@@ -4,7 +4,7 @@ This is code that I've been writing for a basic kernel from the [Writing a Simpl
 
 Compiling
 ---------
-I cross-compile from `x86_64` to `x86` (64 to 32-bit) on my machine, but all the code is plain `x86`. You will require `gcc` and `nasm` (as well as the normal GNU core utils) and you can run the final image using [QEMU](https://www.qemu.org/). To compile just run `make`.
+I cross-compile from `x86_64` to `i686` on my machine. You will require `i686-elf-gcc` and `nasm` (as well as all the rest of the GNU binutils for `i686`) and you can run the final image using [QEMU](https://www.qemu.org/). To compile just run `make`.
 
 Code Structure
 --------------
