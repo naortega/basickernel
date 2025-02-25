@@ -1,6 +1,6 @@
 BasicKernel
 ===========
-This is code that I've been writing for a basic kernel from the [Writing a Simple Operating System from Scratch](http://www.cs.bham.ac.uk/%7Eexr/lectures/opsys/10_11/lectures/os-dev.pdf) book.
+This is code that I've been writing for a basic kernel from the [Writing a Simple Operating System from Scratch](https://web.archive.org/web/20241112015613/http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf) book.
 
 Compiling
 ---------
